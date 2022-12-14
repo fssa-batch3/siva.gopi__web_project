@@ -35,8 +35,7 @@ form{
     margin-left: 50px;
 }
 .pro input:hover{
-    background-color: rgb(255, 0, 0);
-    border: rgb(255, 0, 0);
+   
     cursor: pointer;
     
 }

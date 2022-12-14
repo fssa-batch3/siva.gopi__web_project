@@ -15,7 +15,8 @@ nav{
 
 
 .so{
-   
+    display: flex;
+    flex-direction: row;
     background-color: rgb(150, 209, 209);
     border-radius: 5px;
     
@@ -25,10 +26,11 @@ nav{
     background-color:rgb(218, 177, 136);
     border:rgb(218,177,136);
     cursor: pointer;
-    transform: scale(1.1);
+   
 }
 .sr{
-   
+    display: flex;
+    flex-direction: row;
     background-color: rgb(150, 209, 209);
     border-radius: 5px;
    
@@ -38,7 +40,7 @@ nav{
     background-color: rgb(218, 177, 136);
     border: rgb(218,177,136);
     cursor: pointer;
-    transform: scale(1.1);
+    
 }
 table,th,td{
     border-collapse: collapse;
