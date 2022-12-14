@@ -57,13 +57,11 @@ nav{
 }
 .son2 td{
     border: 1px solid black;
+    padding:  15px;
 }
 .son2 th{
     padding: 20px;
     font-size: 20px;
-}
-.son2 td{
-    padding:  15px;
 }
 .son2 tr:nth-child(odd){
     background-color: rgb(195, 255, 255);
