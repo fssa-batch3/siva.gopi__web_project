@@ -79,4 +79,20 @@ nav{
 .son .hilight td{
     background-color: blue;
 }    
+.ang1{
+    display: flex;
+    flex-direction: row;
+}
+.ang2{
+    margin-left: 40pc;
+    margin-top: 10px;
+    background-color: aqua;
+    border-radius: 5px;
+    width: fit-content;
+}
+.ang2:hover{
+    background-color: peru;
+    border: peru;
+    cursor: pointer;
 
+}

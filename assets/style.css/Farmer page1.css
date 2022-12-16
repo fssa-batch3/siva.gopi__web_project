@@ -76,9 +76,6 @@ button{
    box-shadow: 1px 4px 10px;
 }
 
-body{
-   background-image:url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/82a32f70867073.5bb2289ab99c9.jpg);
-}
 
 button:hover{
     background-color: aqua;
@@ -88,16 +85,11 @@ button:hover{
 }
 .map{
     margin-left:300px;
-    color:azure;
+  
 
 }
-.state{
-    color:azure;
 
-}
-.crop{
-    color: azure;
-}
+
 .container{
     margin: 40px 0 0 300px;
     
@@ -123,11 +115,9 @@ td{
 }
 .font{
     font-size: 1.5rem;
-    color: azure;
-    margin-left: 10px;
+    margin-left: 22px;
 }
 .font1{
     font-size: 1.5rem;
-    color: azure;
     margin-left: 20px;
 }
