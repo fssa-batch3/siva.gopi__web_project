@@ -1,0 +1,14 @@
+nav{
+    display:flex;
+    flex-direction: row;
+}
+.ar1{
+    display: flex;
+    flex-direction: row;
+}
+.ar2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 900px;
+}
