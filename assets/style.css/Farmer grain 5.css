@@ -1,53 +1,98 @@
+*{
+    text-decoration: none;
+}
+
 nav{
     display: flex;
     flex-direction: row;
 }
-.siv {
-    margin-top: 8px;
-
-}
-.tr{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 2px;
-    border: 2px solid black;
-    border-bottom-left-radius: 10px;
+.img{
+    padding-top: 8px;
 }
 
-.sr{
-    display: flex;
-    flex-direction: row;
+
+.ang{
     background-color: aqua;
     border-radius: 5px;
-    margin: 40px  0px 0px 1000px;
+    width: fit-content;
     
 }
-.sr:hover{
+.ang:hover{
     background-color: peru;
     border: peru;
     cursor: pointer;
-    transform: scale(1.1);
+
 }
-table,th,td{
-    border: 4px solid  white;
-    border-collapse: collapse;
+
+.table1{
+    height: fit-content;
 }
-.container{
-    margin: 80px 0 0 150px;
+.son th{
+    padding: 20px;
+    font-size: 20px;
 }
-th{
-    padding: 80px 80px 50px 80px;
-    font-size: 40px;
+.son td{
+    padding:  15px;
 }
-td{
-    padding:  40px 40px 30px 40px;
-}
-tr:nth-child(odd){
+.son tr:nth-child(odd){
     background-color: rgb(195, 255, 255);
 }
-tr:nth-child(even){
+.son tr:nth-child(even){
     background-color: rgb(252, 252, 252);
 }
-.am{
+.son .ar{
     background-color: rgb(172, 233, 172) !important;
+}
+
+.table2{
+    height: fit-content;
+    margin-left: 0;
+}
+.son2{
+    border: 2px solid orange;
+    width: 50em;
+    height: 5em;
+    margin-left: 20em;
+    
+}
+.son2 td{
+    border: 1px solid black;
+    padding:  15px;
+}
+.son2 th{
+    padding: 20px;
+    font-size: 20px;
+}
+.son2 tr:nth-child(odd){
+    background-color: rgb(195, 255, 255);
+}
+.son2 tr:nth-child(even){
+    background-color: rgb(252, 252, 252);
+}
+.son2 .ar{
+    background-color: rgb(172, 233, 172) !important;
+}
+.table{
+    display: flex;
+    flex-direction: row;
+}
+.son .hilight td{
+    background-color:rgb(84, 84, 160);
+}    
+.ang1{
+    display: flex;
+    flex-direction: row;
+}
+.ang2{
+    margin-left: 40pc;
+    margin-top: 10px;
+    background-color: aqua;
+    border-radius: 5px;
+    width: fit-content;
+}
+.ang2:hover{
+    background-color: peru;
+    border: peru;
+    cursor: pointer;
+
 }
