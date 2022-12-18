@@ -1,3 +1,6 @@
+*{
+    text-decoration: none;
+}
 .container{
     display:flex;
     flex-direction: column;
@@ -22,6 +25,11 @@ form{
 }
  label{
     margin-top: 20px;
+}
+button{
+    margin-left: 50px;
+    background-color: coral !important;
+  
 }
 .pro input{
     padding: 10px;
