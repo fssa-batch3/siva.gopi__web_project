@@ -28,46 +28,88 @@
             <div class="a">
                 <div class="b">
                    
-                    <input type=" text" placeholder=" Name" required="true"/>
+                    <input type=" text"  class="drink" placeholder=" Name" required="true" id="name"/>
                  </div>
                    
                     <div class="c">
                        
-                        <input type="number " placeholder="Mobile number " required="true"/>
+                        <input type="number " placeholder="Mobile number " required="true" id ="mobile_number"/>
                     </div>
                    
                     <div class="d">
                        
-                        <input type="text" placeholder="Your District" />
+                        <input type="text" placeholder="Your District" id="district" />
                     </div>
                    
                     <div class="e">
                         
-                        <input type="text" placeholder="Your town" />
+                        <input type="text" placeholder="Your town"  required="true" id="town"/>
                     </div>
 
                     <div class="f">
-                        <input type="text" placeholder=" create a new password" />
+                        <input type="password" placeholder=" create a new password" required="true" id="password" />
                     </div> 
 
                     <div class="f">
-                        <input type="text" placeholder=" Confirm password" />
+                        <input type="password" placeholder=" Confirm password" required="true"  id="confrim_password" />
                     </div>
+
                     
                   
                     <div>
                         
-                        <button class="pro">
-                            <a href="../Farmer/Farmer home page 4.html"> Submit </a>
+                        <button class="pro" type="button" onclick="rigister()">
+                             Submit 
                         </button>
                      
                   </div>
         
                     
             </div>
-           
+        </div>
+</form>
 
+            <script>
 
+                function  rigister()
+                {
+                    let name,mobile_number,district,town,password,confrim_password;
+
+                    name = document.getElementById("name").value;
+                    mobile_number = document.getElementById("mobile_number").value;
+                    district=document.getElementById("district").value;
+                    town=document.getElementById("town").value;
+                    password=document.getElementById("password").value;
+                    confrim_password=document.getElementById("confrim_password").value;
+
+                    let farmer_details=new Array();
+                    farmer_details=JSON.parse(localStorage.getItem("farmer"))?JSON.parse(localStorage.getItem("farmer")):[]
+
+                    if(farmer_details.some((v)=>{return v.mobile_number==mobile_number}))
+                    {
+                        alert("mobile number alredy exicested");
+                        window.location.href = "./Farmer login page 2.html"
+                    }
+                    else
+                    {
+                        farmer_details.push({
+                            "name":name,
+                            "mobile_number":mobile_number,
+                            "district":district,
+                            "town":town,
+                            "password":password,
+                            "confrim_password":confrim_password,
+                            
+
+                        })
+                        alert("your account has been created")
+                        window.location.href = "./Farmer home page 4.html"
+                        localStorage.setItem("farmer",JSON.stringify(farmer_details));
+                    }
+        
+                }
+                
+            </script>
 
 </body>
 

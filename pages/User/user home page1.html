@@ -40,12 +40,12 @@
        
     </nav>
     <hr>
-
+ 
     <div class="container">
-        <div class="container1">
+    <div class="container1">
 
-             <div class="rice">
-                <a href="./user rice page 3.html">
+             <!-- <div class="rice"> -->
+                <!-- <a href="./user rice page 3.html">
                 <img src="../../images/rice 1image.png" alt="rice image" width="200px" height="250px">
                 <h1><p>Rice</p></h1>
                 </a>
@@ -62,13 +62,13 @@
                 <a>
                 <img src="../../images/cotton theart.png" alt="cotton" width="200px" height="250px">
                 <h1><p>Cotton thread</p></h1>
-                </a>
+                </a> -->
 
-            </div>
+            <!-- </div> -->
 
         </div>
 
-        <div class="container2">
+        <!-- <div class="container1">
 
             <div class="coffee">
                 <a>
@@ -89,9 +89,9 @@
                 <h1><p>Sugar</p></h1>
                 </a>
             </div>
-        </div>
+        </div>  -->
 
-    </div>
+    </div> 
 
     <footer>
 
@@ -146,6 +146,75 @@
 	</div>
 	
 </footer>
+
+<script>
+
+    const product_list=[
+    {
+        "image":{
+            "source": "../../images/rice 1image.png",
+            "alt" : "Rice image"
+        },
+        "name": "Rice"
+    }, 
+    {
+        "image":{
+            "source": "../../images/wheat image.png",
+            "alt" : "wheat image"
+        },
+        "name": "Wheat"
+    }, 
+    {
+        "image":{
+            "source": "../../images/cotton theart.png",
+            "alt" : "Cotton image"
+        },
+        "name": "Cotton"
+    }, 
+
+    ]
+
+for(i = 0; i<3; i++){
+    // div open
+    div_rice = document.createElement("div");
+    div_rice.setAttribute("class", "rice");
+    console.log(div_rice);
+
+        a_list =document.createElement("a");
+        a_list.setAttribute("href","./user rice page 3.html");
+        div_rice.append(a_list);
+
+        img_card = document.createElement("img");
+        img_card.setAttribute("src", product_list[i]["image"]["source"]);
+        img_card.setAttribute("alt", product_list[i]["image"]["alt"]);
+        img_card.setAttribute("width","200px");
+        img_card.setAttribute("height","250px");
+        img_card.setAttribute("class", "card-img-top");
+        a_list.append(img_card);
+
+        // h1 tag
+
+        h1_hen = document.createElement("h1");
+        h1_hen.setAttribute("class" , "hen");
+        a_list.append(h1_hen);
+
+         // p
+
+         p_hent = document.createElement("p");
+        p_hent.setAttribute("class", "hent");
+        p_hent.innerText = product_list[i]["name"];
+        h1_hen.append(p_hent);
+
+       
+    
+
+
+    
+
+    document.querySelector("div.container1").append(div_rice);
+}
+
+</script>
 	
 </body>
 </html>

@@ -27,15 +27,15 @@
 
         <div>
             <div class="b">
-                <input type="text " placeholder="Email or Mobile Number  " required="true"/>
+                <input type="text " placeholder="Email or Mobile Number  " required="true" id="mobile_number"/>
             </div>
            
             <div class="c">
-                <input type="text" placeholder="password" />
+                <input type="password" placeholder="password"  required="true" id="password" />
             </div>
 
             <div class="d">
-                <button><a class="navigationlink" href="./Farmer home page 4.html">log in</a></button>
+                <button><a class="navigationlink"  type="button"  on    click="farmer_data" href="./Farmer home page 4.html">log in</a></button>
             </div>
 
             
@@ -57,6 +57,22 @@
 
 
     </div>
+    <script>
+        function farmer_data()
+        {
+        let mobile_number,password;
+        mobile_number=document.getElementById("mobile_number").value;
+        password=document.getElementById("password").value;
+        let farmer_details=new Array();
+        farmer_details.JSON.parse(localStorage.getItem("farmer"))?JSON.parse(localStorage.getItem("farmer")):[]
+        if( farmer_details.some((v)=>{ return v. mobile_number==mobile_number && v.password==password}))
+        {
+            alert("successfully longined");
+            let current_farmer=farmer_details.filter((v)=>{return v.mobile_number==mobile_number && password==password})[0]
+        }
+
+        }
+    </script>
 </body>
 
 

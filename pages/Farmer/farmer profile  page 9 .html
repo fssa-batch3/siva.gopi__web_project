@@ -32,8 +32,8 @@
             </div>
 
             <div>
-                <strong>Name</strong>
-                <h1> <p>xxxxx</p></h1>
+                <p id="name"><strong>Name</strong></p>
+                <h1> <p></p></h1>
             </div>
 
         </div>
@@ -80,6 +80,14 @@
          </div>
 
     </div>
+
+    <script>
+
+        const user_name =localStorage.getItem("name")
+        console.log(name);
+
+        document.getElementById("name").innerText = name
+    </script>
 
 
 
