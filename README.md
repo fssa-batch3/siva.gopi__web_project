@@ -1,13 +1,13 @@
                                 complete...
 Farmer CRUD features...
 
- farmer-create
- farmer-read.
- farmer-update.
- farmer-delete.
+ farmer-create,
+ farmer-read,
+ farmer-update,
+ farmer-delete,
                                 ---------------
 
                                 Now working.....
 Mill owner CRUD page.....
  
- millowner create a product
+ millowner - create a product
