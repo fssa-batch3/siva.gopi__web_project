@@ -10,79 +10,144 @@
 
 <body>
     <div>
-        <header>
-            <a  class="navigationlink" href="../Farmer/FARMER PAGE 1.html"> 
-            <img src="../../images/arrow-undo-outline.svg" alt="arrow logo" width="110px" height="100px"></a>
-        </header>
+        
     </div>
     <div class="container">
-	
-		<div>
-		
+        <div class="card">
             <img src="../../images/agri logo.png" alt="logo" width="180px" height="80px">
 
-        <div class="tr">
-            <h1>log in</h1>
-        </div>
+            <div class="form" onsubmit="saveData(event)">
+                <form>
+                    <div>
+                        <lanbel class="user name"> User mobile number</lanbel>
+                    </div>
+                    <div>
+                        <input type="text" id="mobile_number" class="mobile_number">
+                    </div>
+                    <div> 
+                        <lable class="user password"> password</lable>
+                    </div>
+                    <div> <input type="password" id="password " class="password">
+                    </div>
 
-        <div>
-            <div class="b">
-                <input type="text " placeholder="Email or Mobile Number  " required="true" id="mobile_number"/>
+                    <div>
+                        <button type="submit" class="submit">
+                            SUBMIT
+                        </button>
+                    </div>
+                </form>
+
             </div>
-           
-            <div class="c">
-                <input type="password" placeholder="password"  required="true" id="password" />
-            </div>
-
-            <div class="d">
-                <button><a class="navigationlink"  type="button"  on    click="farmer_data" href="./Farmer home page 4.html">log in</a></button>
-            </div>
-
-            
-        <P>
-            or
-        </P>
-           
-        <button class="of">
-            <a class="navigationlink" href="./Farmer login page 2.html">create a new account 
-
-            </a>
-           </button>
-
-
 
         </div>
-
-
-
 
     </div>
+   
     <script>
-        function farmer_data()
-        {
-        let mobile_number,password;
-        mobile_number=document.getElementById("mobile_number").value;
-        password=document.getElementById("password").value;
-        let farmer_details=new Array();
-        farmer_details.JSON.parse(localStorage.getItem("farmer"))?JSON.parse(localStorage.getItem("farmer")):[]
-        if( farmer_details.some((v)=>{ return v. mobile_number==mobile_number && v.password==password}))
-        {
-            alert("successfully longined");
-            let current_farmer=farmer_details.filter((v)=>{return v.mobile_number==mobile_number && password==password})[0]
-        }
 
-        }
+function saveData()
+{
+let mobile_number,password;
+mobile_number = document.getElementById("mobile_number").value;
+password = document.getElementById("password").value;
+let user_details=new Array();
+user_details =JSON.parse(localStorage.getItem("farmer"))?JSON.parse(localStorage.getItem("farmer")):[]
+if(user_details.some((v)=>{return v.mobile_number==mobile_number && v.password == password}))
+{
+  alert("Successfully Logined ");
+  let current_user=user_details.filter((v)=>{return v.mobile_number == mobile_number && v.password == password})[0]
+ localStorage.setItem('unique',mobile_number.mobile_number);
+
+ location.href = "../../pages/Farmer/Farmer home page 4.html"
+}
+else
+{
+  alert('Please Check your details');
+}
+}
+        // function farmer_data(e)
+        // {
+        //  e.preventDefault();
+        // let mobile_number=document.getElementById("user_mobile_number").value;
+        // let password=document.getElementById("user_password").value;
+
+
+
+        //         // let users = new Array();
+        //     // let user_records = JSON.parse(localStorage.getItem("users"))
+        //     // user_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
+        //     let user_records
+        //     if ( JSON.parse(localStorage.getItem("farmer"))) {
+        //         user_records = JSON.parse(localStorage.getItem("farmer"))
+        //     }
+        //     else {
+        //         user_records =new Array()
+        //     }
+        //     if (user_records.some((v) => { return v.user_email === user_email })) {
+        //         alert("Already exists user");
+        //     }
+        //     else if (name_1.value.length === 0 && email.value.length === 0  && password.value.length === 0 && password2.value.length === 0) {
+        //         alert('Please fill Details');
+        //     } else if (name_1.value.length === 0) {
+        //         alert('Please enter your Name');
+        //     } else if (email.value.length === 0) {
+        //         alert('Please enter your email');
+        //     } else if (password.value.length < 8) {
+        //         alert('Please enter password attleast 8 characters');
+        //     }else if (password2.value != password.value) {
+        //         alert('Confrim password missmatch');
+        //     }
+        //     else {
+        //         user_records.push({
+        //             "user_name": user_name,
+        //             "user_email": user_email,
+        //             "user_password": user_password,
+        //             "user_password2": user_password2
+        //         })
+        //         localStorage.setItem("users", JSON.stringify(user_records));
+        //         alert("Your account has been");
+        //         window.location.href = "./2_login.html";
+        //     }
+        // }
+
+        
+
+
+
+
+
+
+
+        // let farmer_details=new Array();
+        // farmer_details.JSON.parse(localStorage.getItem("farmer"))?JSON.parse(localStorage.getItem("farmer")):[]
+        // console.log(farmer_details);
+        // if( farmer_details.some((v)=>{ return v.mobile_number==mobile_number && v.password==password}))
+        // {
+        //     alert("successfully longined");
+            
+        //     window.location.href = "./Farmer home page 4.html"
+        // }
+        // else
+        // {
+        //                 alert("mobile number or password incorrect please try again");
+        //                 window.location.href = "./Farmer login page 2.html"
+                        
+        //             }
+
+
+        // }
     </script>
+    <!-- let current_farmer=farmer_details.filter((v)=>{return v.mobile_number==mobile_number && password==password})[0] -->
 </body>
 
-
-
-
-
-
-
-
-
-
 </html>
+
+
+
+
+
+        
+
+
+
 

@@ -23,35 +23,35 @@
 //     }
 
 // ]
+// function saveData()
+// {
+// let user_email,pw;
+// user_email = document.getElementById("user_email").value;
+// pw = document.getElementById("password").value;
+// let user_details=new Array();
+// user_details =JSON.parse(localStorage.getItem("userRecords"))?JSON.parse(localStorage.getItem("userRecords")):[]
+// if(user_details.some((v)=>{return v.user_email==user_email && v.pw == pw}))
+// {
+//   alert("Successfully Logined ");
+//   let current_user=user_details.filter((v)=>{return v.user_email == user_email && v.pw == pw})[0]
+//  localStorage.setItem('unique',current_user.user_email);
 
-// let n=5;
-// let str="";
-// for (let i=1; i<=n; i++){
-//     for (let j=n; j>n-i; j--){
-//     str+=j+" ";
-    
+// window.location.href="../homepage/homepage.html"
 // }
-// str+="\n"
-
+// else
+// {
+//   alert('Please Check your details');
 // }
-// console.log(str)
-
-
-// let n=5;
-// let str="";
-// for (let i=1; i<=n; i++){
-//    str+=i+" ";
-
-// console.log(str)
 // }
 
-let a = 5;
-let b = 3;
 
-    a = a+b;
-    b = a-b;
-    a = b-a;
 
-    console.log(a);
-    console.log(b);
 
+
+// function forgot(){
+//     window.location.href ="./username.html"
+// }
+
+let a=10;
+let b=20;
+console.log(a+b);

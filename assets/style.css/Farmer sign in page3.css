@@ -1,53 +1,70 @@
+*{
+    text-decoration: none;
+}
 .container{
+    margin-top: 20%;
+    margin-left: 45%;
+    margin-right: 500px;
+    background-color:blanchedalmond;
+    border: 2px solid black;
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 200px;
-    margin-left: 550px;
-    margin-right: 550px;
-    border: 2px solid black;
     border-radius: 20px;
     align-items: center;
-    padding:50px 10px 30px 10px;
-    background-color: blanchedalmond;
-
-}
-
-.b{
-    margin-bottom: 10px;
-    border-radius: 20px;
-}
-.c{
-    margin-bottom: 10px;
-    border-radius: 20px;
-}
-.d{
-    margin-bottom: 10px;
-    border-radius: 20px;
-    margin-left: 50px;
-    margin-top: 20px;
-    
-}
-
+    padding:20px 10px 10px 10px;
     
 
-a{
-    text-decoration: none;
+   
+}
+.card{
+    width: 100%!important;
+    background: none!important;
+    border: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+img{
+    width: 100%;
+    margin-top: 12px;
     
 }
-
-.of{
-    margin-left: 10px;
+form{
+    width: 150%;
+    margin-top: 12px;
+    font-size: large;
+    
 }
+form input{
+    width: 58%;
+    height: 30px;
+    margin-left: 8px;
+    border-radius: 5px;
+    border-color: white;
+}
+form input:focus{
+    width: 58%;
+    height: 30px;
+    
+    background-color: lightblue;
+    font-weight: bold;
 
+}
+.submit{
+    margin-left: 25%;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-color: deepskyblue;
+    background-color: deepskyblue;
+    color:white;
+    height: 30px;
+}
 body{
-    background-image: url(../../images/Veganic-Farming.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.tr{
-    margin-left: 40px;
-}
-p{
-    margin-left: 65px;
+    background: linear-gradient(90deg, #00FFFF 0%, #00FFA1 100%);
 }
