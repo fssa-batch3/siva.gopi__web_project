@@ -45,13 +45,9 @@
 // }
 
 
-
-
-
-// function forgot(){
-//     window.location.href ="./username.html"
-// }
-
-let a=10;
-let b=20;
-console.log(a+b);
+let a=[1,0];
+let siva="";
+for(i=1;i<=a.length;i++){
+    siva += i + " ";
+}
+console.log(siva)
