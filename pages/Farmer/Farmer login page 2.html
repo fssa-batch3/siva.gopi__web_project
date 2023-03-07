@@ -75,22 +75,7 @@
 
     <script>
 
-        // function registration(){
-        //     console.log("dhanush oru loosu");
-
-        //     const form = document.querySelector("#form")
-
-        //     const userData = new FormData(form);
-
-        //     let userList = [];
-
-        //     userList.push({
-        //         username : userData.get("username")
-        //     })
-
-        //     localStorage.setItem("userList",JSON.stringify(userList));
-        // }
-
+       
 
 
 function  registration(e)
@@ -126,58 +111,14 @@ function  registration(e)
 
                         })
                         alert("Your account has been created")
-                        location.href = "../../pages/Farmer/Farmer home page 4.html"
-                        localStorage.setItem("farmer",JSON.stringify(farmer_details));
                         
+                        localStorage.setItem("farmer",JSON.stringify(farmer_details));
+                        location.href = "../../pages/Farmer/Farmer home page 4.html"
 
                         
                     }
                     
                 } 
-
-        // // const submit = document.querySelector(".button");
-        // // submit.
-
-        // function registration() {
-        //     // let name,mobile_number,district,town,password,confrim_password;
-
-        //     const name = document.getElementById("name").value;
-        //     const mobile_number = document.getElementById("mobile_number").value;
-        //     const district = document.getElementById("district").value;
-        //     const town = document.getElementById("town").value;
-        //     const password = document.getElementById("password").value;
-        //     const confrim_password = document.getElementById("confrim_password").value;
-
-
-       
-
-
-
-        //     if (name == "" && mobile_number == "" && district == "" && town == "" &&
-        //         password == "" && confrim_password == "") {
-        //         alert("  input  field has no value");
-                
-        //     }
-        //     else if(mobile_number == mobile_number){
-                 
-        //             alert("mobile number alredy exicested");
-        //         }
-        //         else {
-        //             alert("registration successfull");
-        //             location.href = "./Farmer home page 4.html"
-        //         }
-            
-
-        //     localStorage.setItem('name', name);
-        //     localStorage.setItem('mobile_number', mobile_number);
-        //     localStorage.setItem('district', district);
-        //     localStorage.setItem('town', town);
-        //     localStorage.setItem('password', password);
-        //     localStorage.setItem('confrim_password', confrim_password);
-
-
-
-        // }
 
 
 

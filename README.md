@@ -18,5 +18,12 @@ Farmer CRUD features...
                                 Now working.....
 Mill owner CRUD page.....
  
- millowner - create a product
- millowner - delete a product.
+ millowner - create a product,
+ millowner - read a product,
+ millowner - update a product.  
+ millowner - delete a product,
+ millowner - profile CRUD...... now working.......
+
+user(people)
+
+user - profile CRUD.

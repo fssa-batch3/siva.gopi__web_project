@@ -16,18 +16,16 @@
         <div class="card">
             <img src="../../images/agri logo.png" alt="logo" width="180px" height="80px">
 
-            <div class="form" onsubmit="saveData(event)">
+            <div class="form" >
                 <form>
-                    <div>
-                        <lanbel class="user name"> User mobile number</lanbel>
-                    </div>
-                    <div>
+                    <div class="form-con">
+                        <lanbel class="user_number"> User mobile number</lanbel>
                         <input type="text" id="mobile_number" class="mobile_number">
                     </div>
-                    <div> 
+
+                    <div class="form-con"> 
                         <lable class="user password"> password</lable>
-                    </div>
-                    <div> <input type="password" id="password " class="password">
+                        <input type="password" id="password" class="password">
                     </div>
 
                     <div>
@@ -45,72 +43,59 @@
    
     <script>
 
-function saveData()
-{
-let mobile_number,password;
-mobile_number = document.getElementById("mobile_number").value;
-password = document.getElementById("password").value;
-let user_details=new Array();
-user_details =JSON.parse(localStorage.getItem("farmer"))?JSON.parse(localStorage.getItem("farmer")):[]
-if(user_details.some((v)=>{return v.mobile_number==mobile_number && v.password == password}))
-{
-  alert("Successfully Logined ");
-  let current_user=user_details.filter((v)=>{return v.mobile_number == mobile_number && v.password == password})[0]
- localStorage.setItem('unique',mobile_number.mobile_number);
+let logForm = document.querySelector("form")
 
- location.href = "../../pages/Farmer/Farmer home page 4.html"
+
+logForm.addEventListener("submit", function (event){
+
+    event.preventDefault();
+    let user_details= [];
+
+    let registerDataParse = JSON.parse(localStorage.getItem("farmer"))
+    console.log(registerDataParse)
+
+
+let mobile_number = document.getElementById("mobile_number").value;
+
+console.log(mobile_number)
+let password = document.getElementById("password").value;
+
+console.log(password)
+
+
+
+let checkUser = false;
+
+for(let i=0; i<registerDataParse.length; i++){
+
+if (registerDataParse[i]["mobile_number"]  == mobile_number){
+
+checkUser = true;
+
+
+let logInObject = {
+    mobileNo : mobile_number,
+    pass: password,
+
+    }
+
+    console.log(logInObject)
+
+    user_details.push(logInObject)
+
+localStorage.setItem("logIn", JSON.stringify(user_details))
+ 
+
+}else {
+    alert("mobile number is not match")
 }
-else
-{
-  alert('Please Check your details');
+
 }
-}
-        // function farmer_data(e)
-        // {
-        //  e.preventDefault();
-        // let mobile_number=document.getElementById("user_mobile_number").value;
-        // let password=document.getElementById("user_password").value;
+ 
 
 
 
-        //         // let users = new Array();
-        //     // let user_records = JSON.parse(localStorage.getItem("users"))
-        //     // user_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
-        //     let user_records
-        //     if ( JSON.parse(localStorage.getItem("farmer"))) {
-        //         user_records = JSON.parse(localStorage.getItem("farmer"))
-        //     }
-        //     else {
-        //         user_records =new Array()
-        //     }
-        //     if (user_records.some((v) => { return v.user_email === user_email })) {
-        //         alert("Already exists user");
-        //     }
-        //     else if (name_1.value.length === 0 && email.value.length === 0  && password.value.length === 0 && password2.value.length === 0) {
-        //         alert('Please fill Details');
-        //     } else if (name_1.value.length === 0) {
-        //         alert('Please enter your Name');
-        //     } else if (email.value.length === 0) {
-        //         alert('Please enter your email');
-        //     } else if (password.value.length < 8) {
-        //         alert('Please enter password attleast 8 characters');
-        //     }else if (password2.value != password.value) {
-        //         alert('Confrim password missmatch');
-        //     }
-        //     else {
-        //         user_records.push({
-        //             "user_name": user_name,
-        //             "user_email": user_email,
-        //             "user_password": user_password,
-        //             "user_password2": user_password2
-        //         })
-        //         localStorage.setItem("users", JSON.stringify(user_records));
-        //         alert("Your account has been");
-        //         window.location.href = "./2_login.html";
-        //     }
-        // }
-
-        
+})
 
 
 
@@ -118,26 +103,8 @@ else
 
 
 
-        // let farmer_details=new Array();
-        // farmer_details.JSON.parse(localStorage.getItem("farmer"))?JSON.parse(localStorage.getItem("farmer")):[]
-        // console.log(farmer_details);
-        // if( farmer_details.some((v)=>{ return v.mobile_number==mobile_number && v.password==password}))
-        // {
-        //     alert("successfully longined");
-            
-        //     window.location.href = "./Farmer home page 4.html"
-        // }
-        // else
-        // {
-        //                 alert("mobile number or password incorrect please try again");
-        //                 window.location.href = "./Farmer login page 2.html"
-                        
-        //             }
-
-
-        // }
-    </script>
-    <!-- let current_farmer=farmer_details.filter((v)=>{return v.mobile_number==mobile_number && password==password})[0] -->
+      
+ </script>
 </body>
 
 </html>
