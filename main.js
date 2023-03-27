@@ -45,9 +45,9 @@
 // }
 
 
-let a=[1,0];
+let a=1,2,3,4,5;
 let siva="";
-for(i=1;i<=a.length;i++){
+for(i=0;i<a;i++){
     siva += i + " ";
 }
 console.log(siva)
