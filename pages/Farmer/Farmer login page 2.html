@@ -78,51 +78,54 @@
        
 
 
-function  registration(e)
-                {
+function  registration(e){
                     e.preventDefault();
-                    let name,mobile_number,district,town,password,confrim_password;
 
-                    name = document.getElementById("name").value;
-                    mobile_number = document.getElementById("mobile_number").value;
-                    district=document.getElementById("district").value;
-                    town=document.getElementById("town").value;
-                    password=document.getElementById("password").value;
-                    confrim_password=document.getElementById("confrim_password").value;
+                    let name = document.getElementById("name").value,
+                    mobile_number = document.getElementById("mobile_number").value,
+                    district = document.getElementById("district").value,
+                    town = document.getElementById("town").value,
+                    password = document.getElementById("password").value,
+                    confrim_password = document.getElementById("confrim_password").value;
 
-                    let farmer_details=new Array();
-                    farmer_details=JSON.parse(localStorage.getItem("farmer"))?JSON.parse(localStorage.getItem("farmer")):[]
-
-                    if(farmer_details.some((v)=>{return v.mobile_number==mobile_number}))
-                    {
-                        alert("mobile number alredy exicested");
-                        
+                    function checkpass(){
+                        if(password != password){
+                            alert("Incrrect password")
+                            document.getElementById('user_password').reset();
+                        }
                     }
-                    else
-                    {
-                        farmer_details.push({
-                            "name":name,
-                            "mobile_number":mobile_number,
-                            "district":district,
-                            "town":town,
-                            "password":password,
-                            "confrim_password":confrim_password,
-                            
 
-                        })
-                        alert("Your account has been created")
-                        
-                        localStorage.setItem("farmer",JSON.stringify(farmer_details));
-                        location.href = "../../pages/Farmer/Farmer home page 4.html"
+                    checkpass();
 
-                        
-                    }
-                    
-                } 
-
-
-
-
+                    let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
+      let exist = user_list.length &&
+        JSON.parse(localStorage.getItem('user_list')).some(data =>
+          data.name.toLowerCase() == name.toLowerCase() ||
+          data.mobile_number == mobile_number
+        );
+      if (!exist) {
+        user_list.push({
+          name,
+          mobile_number,
+          district,
+          town,
+          password,
+          confrim_password
+        });
+        localStorage.setItem('user_list', JSON.stringify(user_list));
+        console.log(localStorage.getItem('user_list'));
+        document.querySelector('form').reset();
+        document.getElementById('name').focus();
+        document.getElementById('mobile_number').focus();
+        alert('Account created Successfully');
+        location.href = "../Farmer/farmer sign in page 3.html";
+      }
+      else {
+        alert('Sorry the User already Exist!! \n Try with different Phone number or name');
+        document.querySelector('form').reset();
+      }
+    }
+  
 
     </script>
 

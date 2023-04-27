@@ -45,9 +45,10 @@
 // }
 
 
-let a=1,2,3,4,5;
-let siva="";
-for(i=0;i<a;i++){
-    siva += i + " ";
-}
-console.log(siva)
+
+let Sentence="inba looks good";
+let search="good";
+let replace="bad";
+let Newsentence=" ";
+
+for(i=0;i<)
