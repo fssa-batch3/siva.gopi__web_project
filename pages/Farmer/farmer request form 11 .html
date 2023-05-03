@@ -1,93 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <title>farmer request form 11</title>
-        <link rel="stylesheet"  href="../../assets/style.css/Farmer request 11.css">
+        <title>farmer login page2</title>
+        <link
+            rel="stylesheet"
+            href="../../assets/style.css/farmer login page2.css"
+        >
     </head>
 
-
-<body >
-
-    <nav> 
-        <div class="siv">
-            <a class="navigationlink" href="./farmer export page 7 .html">
-                <img src="../../images/arrow-back-outline.svg" alt="arrow logo" width="50px"/>
-            </a>
-           
-           
-        </div>
-
-        <div class="si">
-            <h1> <strong> Add export details</strong></h1>
-
-        </div>
-
-    </nav>
-    <hr>
-<form >
+    <body>
         <div class="container">
-
-            <div>
-                <h2>Request form</h2>
-                
+            <div clasd="header">
+                <h2>Upload your grains details</h2>
             </div>
 
-            <div class="a">
-                <div class="b">
-                   
-                    <input type=" text" placeholder=" Name" required="true"/>
-                 </div>
-                   
-                    <div class="c">
-                       
-                        <input type="number " placeholder="Address " required="true"/>
+            <form class="form" id="form">
+                <div>
+                    <div>
+                        <label>Catagory</label>
+                        <input type="text">
+
+                        <label>Date</label>
+                        <input type="date">
+
+                        <label> Sub Catagory</label>
+                        <input type="text">
+
+                        <label>Quantity</label>
+                        <input type="text">
+
+                        <label>Quality</label>
+                        <input type="text">
                     </div>
-                   
-                    <div class="d">
-                       
-                        <input type="text" placeholder="Grain type" />
+
+                    <div>
+                        <label>Catagory</label>
+                        <input type="text">
+
+                        <label>Catagory</label>
+                        <input type="text">
+
+                        <label>Catagory</label>
+                        <input type="text">
+
+                        <label>Catagory</label>
+                        <input type="text">
                     </div>
+                </div>
+            </form>
+        </div>
 
-                    <div class="e">
-                        <input type='text'  placeholder="Quantity"  />
-                        </div>  
-                   
-                    <div class="f">
-                        <input type='text' list='count' placeholder=" Quality"  />
-                        <datalist id='count'>
-                        <option>A1</option>
-                        <option>A2</option>
-                        <option>A3</option>
-                        </datalist>
-                        </div>  
-
-                   
-                    <div class="f">
-                        <input type="text" placeholder=" Phone number" />
-                    </div>
-                    
-                
-
-                    
-                     <div class="pro">
-                        <button>
-                            <a href="./farmer export page 7 .html"> 
-                                submit
-                            </a>
-                        </button>
-                       
-
-                            </a>
-                                                     
-                      </div>
-                   
-        
-                    
+        <!-- <div class="container">
+            <div class="header">
+            <h2> Create Account</h2>
             </div>
-           
+            <form class="form" id="form"  onsubmit="registration(event)">
+            <div class="form-con">
+            <label> Farmer Name</label>
+            <input type="text" id="name"  pattern="[a-zA-Z0-9]+" title="Required Name" required>
+            <small>Error message</small>
+            </div>
 
+            <div class="form-con">
+            <label> Mobile Number </label>
+            <input type="tel" id="mobile_number" title="Required Mobile Number" required >
+            <small>Error message</small>
 
-</body>
+            </div>
 
+            <div class="form-con">
+            <label> district</label>
+            <input type="text" id="district" title="Required district" required>
+            <small>Error message</small>
+
+            </div>
+
+            <div class="form-con">
+            <label> Town</label>
+            <input type="text" id="town" title="Required " required>
+            <small>Error message</small>
+
+            </div>
+
+            <div class="form-con">
+            <label> Password</label>
+            <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required >
+            <small>Error message</small>
+
+            </div>
+
+            <div class="form-con">
+            <label> Confrim password</label>
+            <input type="password" id="confrim_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            <small>Error message</small>
+
+            </div>
+
+            <a href="./Farmer home page 4.html"></a>
+
+            <button>
+            <a href="../Farmer/FARMER PAGE 1.html">
+            back
+            </a>
+            </button>
+
+            <button type="submit"  > Submit </button> <a href=""></a>
+
+            </form>
+
+            </div>
+        -->
+
+        <!-- <script>
+
+            function  registration(e){
+            e.preventDefault();
+
+            let name = document.getElementById("name").value,
+            mobile_number = document.getElementById("mobile_number").value,
+            district = document.getElementById("district").value,
+            town = document.getElementById("town").value,
+            password = document.getElementById("password").value,
+            confrim_password = document.getElementById("confrim_password").value;
+
+            function checkpass(){
+            if(password != password){
+            alert("Incrrect password")
+            document.getElementById('user_password').reset();
+            }
+            }
+
+            checkpass();
+
+            let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
+            let exist = user_list.length &&
+            JSON.parse(localStorage.getItem('user_list')).some(data =>
+            data.name.toLowerCase() == name.toLowerCase() ||
+            data.mobile_number == mobile_number
+            );
+            if (!exist) {
+            user_list.push({
+            name,
+            mobile_number,
+            district,
+            town,
+            password,
+            confrim_password
+            });
+            localStorage.setItem('user_list', JSON.stringify(user_list));
+            console.log(localStorage.getItem('user_list'));
+            document.querySelector('form').reset();
+            document.getElementById('name').focus();
+            document.getElementById('mobile_number').focus();
+            alert('Account created Successfully');
+            location.href = "../Farmer/farmer sign in page 3.html";
+            }
+            else {
+            alert('Sorry the User already Exist!! \n Try with different Phone number or name');
+            document.querySelector('form').reset();
+            }
+            }
+
+            </script> -->
+    </body>
 </html>

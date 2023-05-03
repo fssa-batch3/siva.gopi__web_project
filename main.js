@@ -43,12 +43,3 @@
 //   alert('Please Check your details');
 // }
 // }
-
-
-
-let Sentence="inba looks good";
-let search="good";
-let replace="bad";
-let Newsentence=" ";
-
-for(i=0;i<)

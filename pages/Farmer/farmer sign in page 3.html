@@ -1,89 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>farmer sign in page 3</title>
+    <head>
+        <title>farmer sign in page 3</title>
 
-    <link rel="stylesheet" href="../../assets/style.css/Farmer sign in page3.css"/>
+        <link rel="stylesheet" href="../../assets/style.css/Farmer sign in page3.css">
 
-</head>
+    </head>
 
-<body>
-    <div>
+    <body>
+        <div>
 
-    </div>
-    <div class="container">
-        <div class="card">
-            <img src="../../images/agri logo.png" alt="logo" width="180px" height="80px">
+        </div>
+        <div class="container">
+            <div class="card">
+                <img src="../../images/agri logo.png" alt="logo" width="180px" height="80px">
 
-            <div class="form">
-                <form onsubmit="signIn(event);">
-                    <div class="form-con">
-                        <lanbel class="user_number"> User mobile number</lanbel>
-                        <input type="text" id="mobile_number" class="mobile_number">
-                    </div>
+                <div class="form">
+                    <form onsubmit="signIn(event);">
+                        <div class="form-con">
+                            <lanbel class="user_number"> User mobile number</lanbel>
+                            <input type="text" id="mobile_number" class="mobile_number">
+                        </div>
 
-                    <div class="form-con">
-                        <lable class="user password"> password</lable>
-                        <input type="password" id="password" class="password">
-                    </div>
+                        <div class="form-con">
+                            <lable class="user password"> password</lable>
+                            <input type="password" id="password" class="password">
+                        </div>
 
-                    <div>
-                        <button type="submit"  class="submit">
-                            SUBMIT
-                        </button>
-                    </div>
-                </form>
+                        <div>
+                            <button type="submit" class="submit">
+                                SUBMIT
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-    <script>
-
-
+        <script>
 function signIn(e) {
   e.preventDefault();
-  let mobile_number = document.getElementById('mobile_number').value;
-  let password = document.getElementById('password').value;
-  let user_list = JSON.parse(localStorage.getItem('user_list'));
-  let exist = user_list.length &&
-    JSON.parse(localStorage.getItem('user_list')).some(data =>
-      data.password.toLowerCase() == password.toLowerCase() &&
-      data.mobile_number == mobile_number);
+  const mobile_number = document.getElementById("mobile_number").value;
+  const password = document.getElementById("password").value;
+  const user_list = JSON.parse(localStorage.getItem("user_list"));
+  const exist =
+    user_list.length &&
+    JSON.parse(localStorage.getItem("user_list")).some(
+      (data) =>
+        data.password.toLowerCase() == password.toLowerCase() &&
+        data.mobile_number == mobile_number
+    );
   if (!exist) {
     alert("Incorrect login credentials");
-  }
-   else {
+  } else {
     alert("Your login in successful");
     localStorage.setItem("unique", mobile_number);
     location.href = "../../pages/Farmer/Farmer home page 4.html";
   }
 }
 
-        // function signIn(e) {
-        //     e.preventDefault();
-        //     let
-        //         password = document.getElementById('password').value;
-        //     mobile_number = document.getElementById('mobile_number').value;
-        //     let user_list = JSON.parse(localStorage.getItem('user_list'));
-        //     let exist = user_list.length &&
-        //         JSON.parse(localStorage.getItem('user_list')).some(data =>
-        //             data.password.toLowerCase() == password.toLowerCase() &&
-        //             data.mobile_number == mobile_number);
-        //     if (!exist) {
-        //         alert("Incorrect login credentials");
-        //     }
-        //     else {
-        //         alert("Your login in successful");
-        //         localStorage.setItem("unique", user_number);
-        //         location.href = "../Farmer/FARMER PAGE 1.html";
-        //     }
-        // }
-
+// function signIn(e) {
+//     e.preventDefault();
+//     let
+//         password = document.getElementById('password').value;
+//     mobile_number = document.getElementById('mobile_number').value;
+//     let user_list = JSON.parse(localStorage.getItem('user_list'));
+//     let exist = user_list.length &&
+//         JSON.parse(localStorage.getItem('user_list')).some(data =>
+//             data.password.toLowerCase() == password.toLowerCase() &&
+//             data.mobile_number == mobile_number);
+//     if (!exist) {
+//         alert("Incorrect login credentials");
+//     }
+//     else {
+//         alert("Your login in successful");
+//         localStorage.setItem("unique", user_number);
+//         location.href = "../Farmer/FARMER PAGE 1.html";
+//     }
+// }
     </script>
-</body>
+    </body>
 
 </html>
