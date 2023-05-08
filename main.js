@@ -43,11 +43,3 @@
 //   alert('Please Check your details');
 // }
 // }
-
-
-let a=[1,0];
-let siva="";
-for(i=1;i<=a.length;i++){
-    siva += i + " ";
-}
-console.log(siva)

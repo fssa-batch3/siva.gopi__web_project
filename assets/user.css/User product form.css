@@ -1,0 +1,234 @@
+a {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    border-radius: white;
+    box-shadow: 10px 20px 25px rgba(rgb(0, 0, 0, .3));
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.header {
+    padding: 50px 40px;
+    background-color: lightgray;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.form {
+    padding: 30px 40px;
+    background-color: antiquewhite;
+}
+
+.form-con {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.form-con label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-con input {
+    width: 100%;
+    height: 30px;
+    margin-left: px;
+
+    border-color: white;
+
+    font-size: 14px;
+
+
+
+}
+
+.form-con input:focus {
+    width: 100%;
+    height: 30px;
+
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+.form-con.success input {
+    border-color: lightgreen;
+}
+
+.form-con.error input {
+    border-color: rgb(237, 102, 102);
+}
+
+.form-con small {
+    color: rgb(237, 102, 102);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.form-con small button {
+    background-color: blueviolet;
+    border: none;
+}
+
+input {
+    border: solid 2px gray;
+}
+
+
+input:valid {
+    border: solid 2px green;
+}
+
+input:invalid {
+    border: solid 2px red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
+    text-decoration: none;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    border: 2px solid black;
+    border-radius: 20px;
+    align-items: center;
+    padding:20px 10px 10px 10px;
+    background-color: blanchedalmond;
+    
+}
+h1{
+    color: darkgreen;
+    
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+ label{
+    margin-top: 20px;
+}
+button{
+    margin-left: 50px;
+    background-color: coral !important;
+  
+}
+.pro input{
+    padding: 10px;
+    background-color: black;
+    color: azure;
+    margin-top: 10px;
+    border-radius: 20px;
+    
+}
+.pro{
+    margin-left: 50px;
+}
+.pro input:hover{
+   
+    cursor: pointer;
+    
+}
+
+
+.a{
+    margin-top: 10px;
+   
+
+}
+.b{
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.c{
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.d{
+    margin-bottom: 10px; 
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.e{
+    margin-bottom: 10px; 
+    border: 2px solid black;
+    border-radius: 10px;
+    
+}
+.f{
+    margin-bottom: 10px; 
+    margin-top: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+body{
+     
+    background-image:url(../../images/img\ 1\ farmer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.g button{
+    padding: 10px;
+    background-color:  blanchedalmond;
+    margin-top: 10px;
+    border-radius: 20px;
+} 
+
+.to{
+    margin-left: 50px;
+}
+.g{
+    margin-left: 10px;
+}
+.on{
+margin-left: 20px;
+} */

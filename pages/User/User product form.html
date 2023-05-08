@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title> farmer login page2</title>
+        <link rel="stylesheet" href="../../assets/user.css/User product form.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="header">
+                <h2> Create Account</h2>
+            </div>
+            <form class="form" id="form">
+                <div class="form-con">
+                    <label> Grains Name</label>
+                    <input type="text" id="grains_name" pattern="[a-zA-Z0-9]+" required>
+              
+                </div>
+
+                <div class="form-con">
+                    <label> picture of the grains </label>
+                    <input type="text" id="grains_image" required>
+
+                </div>
+
+                <div class="form-con">
+                    <label> Describtion</label>
+                    <input type="text" id="description" required>
+                    <small>Error message</small>
+
+                </div>
+
+                <!-- <div class="form-con">
+                    <label> Town</label>
+                    <input type="text" id="town" title="Required " required>
+                    <small>Error message</small>
+
+                    </div>
+
+                    <div class="form-con">
+                    <label> Password</label>
+                    <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required >
+                    <small>Error message</small>
+
+                    </div>
+
+                    <div class="form-con">
+                    <label> Confrim password</label>
+                    <input type="password" id="confrim_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    <small>Error message</small> -->
+
+                <!-- </div> -->
+
+                <button>
+                    <!-- <a href="#"> -->
+                    back
+                    <!-- </a> -->
+                </button>
+
+                <button type="submit">Submit</button>
+                <!-- <a href=""></a> -->
+
+            </form>
+
+        </div>
+
+        <script>// new code
+
+        const form = document.getElementById("form");
+        form.addEventListener("submit", function (e) {
+  const grains_name = document.getElementById("grains_name").value;
+          const grains_image = document.getElementById("grains_image").value;
+          const description = document.getElementById("description").value;
+
+          console.log(grains_image);
+          console.log(grains_name);
+          console.log(description);
+
+          e.preventDefault();
+        
+          const grain_details = JSON.parse(localStorage.getItem("grain_details")) ?? [];
+
+          const obj = {};
+
+          obj.grains_name = grains_name;
+          obj.grains_image = grains_image;
+          obj.description = description;
+
+          grain_details.push(obj);
+          localStorage.setItem("grain_details", JSON.stringify(grain_details));
+          window.location.href = "./user home page1.html";
+        });
+
+// old code
+
+//    let grains_name =  document.getElementById("grains_name").value;
+//    let grains_image = document.getElementById("grains_image").value;
+//    let description = document.getElementById("description").value;
+//    console.log(grains_name)
+
+//    let grain_details = [];
+//    let grains_data = {};
+
+//    grains_data["grain_name"] = grains_name;
+//    grains_data["grain_image"] = grains_image;
+//    grains_data["description"] = description;
+
+//    grain_details.push(grains_data);
+
+//    let form = document.getElementById("form");
+//     form.addEventListener("submit",function(event){
+
+        //         // event.preventDefault()
+//         if(window.localStorage.getItem("grain_details") === null){
+//     window.localStorage.setItem("grain_details",JSON.stringify(grain_details));
+//    }else{
+//         let json  = JSON.parse(window.localStorage.getItem("grain_details"));
+//         json.push(grains_data);
+//         window.localStorage.setItem("grain_details",JSON.stringify(json))
+//    }
+//     });
+
+// function  registration(e){
+//                     e.preventDefault();
+
+//                     "let name = document.getElementById("name").value,
+//                     mobile_number = document.getElementById("mobile_number").value,
+//                     district = document.getElementById("district").value,
+//                     town = document.getElementById("town").value,
+//                     password = document.getElementById("password").value,
+//                     confrim_password = document.getElementById("confrim_password").value;"
+
+//                     function checkpass(){
+//                         if(password != password){
+//                             alert("Incrrect password")
+//                             document.getElementById('user_password').reset();
+//                         }
+//                     }
+
+//                     checkpass();
+
+//                     let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
+//       let exist = user_list.length &&
+//         JSON.parse(localStorage.getItem('user_list')).some(data =>
+//           data.name.toLowerCase() == name.toLowerCase() ||
+//           data.mobile_number == mobile_number
+//         );
+//       if (!exist) {
+//         user_list.push({
+//           name,
+//           mobile_number,
+//           district,
+//           town,
+//           password,
+//           confrim_password
+//         });
+//         localStorage.setItem('user_list', JSON.stringify(user_list));
+//         console.log(localStorage.getItem('user_list'));
+//         document.querySelector('form').reset();
+//         document.getElementById('name').focus();
+//         document.getElementById('mobile_number').focus();
+//         alert('Account created Successfully');
+//         location.href = "../Farmer/farmer sign in page 3.html";
+//       }
+//       else {
+//         alert('Sorry the User already Exist!! \n Try with different Phone number or name');
+//         document.querySelector('form').reset();
+//       }
+//     }
+
+//
+</script>
+
+    </body>
+
+</html>
